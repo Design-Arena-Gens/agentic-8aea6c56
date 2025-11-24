@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --background: #040708;
+  --foreground: #d1ffec;
+  --terminal-black: #040708;
+  --terminal-panel: #071017;
+  --terminal-green: #5cffc7;
+  --terminal-emerald: #2fd18a;
+  --terminal-amber: #ffb84d;
+  --terminal-muted: #8be1c2;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--terminal-black);
+  color: var(--foreground);
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo,
+    Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@layer utilities {
+  .bg-terminal-black {
+    background-color: var(--terminal-black);
+  }
+
+  .bg-terminal-panel {
+    background-color: rgba(7, 16, 23, 0.85);
+  }
+
+  .text-terminal-green {
+    color: var(--terminal-green);
+  }
+
+  .text-terminal-muted {
+    color: var(--terminal-muted);
+  }
+
+  .text-terminal-amber {
+    color: var(--terminal-amber);
+  }
+
+  .text-terminal-emerald {
+    color: var(--terminal-emerald);
+  }
+
+  .border-terminal-emerald {
+    border-color: var(--terminal-emerald);
+  }
+
+  .border-terminal-emerald-40 {
+    border-color: rgba(47, 209, 138, 0.4);
+  }
+
+  .border-terminal-emerald-50 {
+    border-color: rgba(47, 209, 138, 0.5);
+  }
+
+  .border-terminal-emerald-60 {
+    border-color: rgba(47, 209, 138, 0.6);
+  }
+
+  .bg-terminal-black-60 {
+    background-color: rgba(4, 7, 8, 0.6);
+  }
+
+  .bg-terminal-black-70 {
+    background-color: rgba(4, 7, 8, 0.7);
+  }
+
+  .shadow-terminal {
+    box-shadow: 0 20px 60px rgba(15, 34, 28, 0.45);
+  }
+
+  .hover-terminal-fill:hover {
+    background-color: rgba(47, 209, 138, 0.12);
+  }
+}
